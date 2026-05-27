@@ -81,6 +81,17 @@ The **AntiGravity AI** creator studio is built using a highly focused, high-perf
 
 ## 🔮 Key Features
 
+Here is a high-level highlight matrix of the engine's core capabilities:
+
+* ✔ **AI Speech-to-Text Transcription** — Progressive Whisper models streaming frame-exact vocal transcript segments.
+* ✔ **Viral Segment Detection** — GPT-4o mapping active emotional peaks to extract high-retention short clips.
+* ✔ **Automated Reel Captioning** — Live synchronization of kinetic neon subtitle presets matching millisecond offsets.
+* ✔ **AI B-roll Recommendations** — Prompt alignment pipelines matching generative studio visual assets to target timeline cues.
+* ✔ **Multimodal Content Pipeline** — A unified workflow translating long master assets into copy-ready social bundles.
+* ✔ **Social Media Automation** — Scheduled secure packet broadcaster simulations routing reels directly across social matrices.
+
+### Detailed Workspace Specifications
+
 - **Telemetry Core Dashboard**: Standby telemetry tracker streaming system load, active CUDA units, memory allocations, and model configurations.
 - **Whisper Live feed**: Progressive word-by-word streaming transcript with live confidence indicators mapping speech anomalies.
 - **Word-Level Subtitle Corrector**: Click on any word in the transcript feed to pause the video and open the editor corrector. Correcting a spelling propagates back to the video subtitles instantly.
