@@ -144,3 +144,9 @@ We are actively developing and expanding the AntiGravity engine capabilities. Fu
 - **Serverless Video Processing**: Incorporate browser sandboxed WebAssembly compilers (`ffmpeg.wasm`) to slice timelines client-side.
 - **Platform Webhooks**: Establish secure OAuth connections to Instagram Business, TikTok Creator, and YouTube social APIs to fully automate publication feeds.
 - **Advanced Dynamic Subtitles**: Expand kinetic typography layout libraries with custom speech tracking presets, volumetric overlays, and sound-reactive fonts.
+
+---
+
+## ⚖️ License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
