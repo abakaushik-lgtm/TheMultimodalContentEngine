@@ -82,24 +82,29 @@ graph TD
 
 ---
 
-## 📸 Screenshots & Visuals
+## 📸 Screenshots & UI Mockups
 
-Here are some high-fidelity illustrations of the creator studio in action:
+Here is a high-fidelity visual showcase of the **AntiGravity** workspace platforms, showing detailed layouts of active screens:
 
-### 1. The Holographic Dashboard Sandbox
-Preview the immersive studio workspace:
-![AntiGravity Creator Studio Hero](assets/branding_hero.png)
+### 1. AI Dashboard Screen
+*Epic, ultra-realistic visual of the holographic AntiGravity workspace sandbox and timeline interfaces:*
+![AI Dashboard Screen](assets/branding_hero.png)
 
-### 2. Corporate AI Strategist Assistant
-The consciousness powering the hooks analyzer:
-![AI Strategist](assets/strategist_avatar.png)
+### 2. Reel Preview Mockup Screen
+*Sleek 9:16 vertical smartphone view presenting the active short-form reel with floating kinetic caption titles and social overlay metrics:*
+![Reel Preview Mockup Screen](assets/mockup_reel_preview.png)
 
-### 3. Suggested Cinematic B-Roll Channels
-Cinematic assets matched dynamically based on generative script cues:
+### 3. Transcript Interface Screen
+*High-precision display of the Whisper AI transcription core, tracking speech timelines and synchronizing active word corrections:*
+![Transcript Interface Screen](assets/broll_chrome_robot.png)
 
-| City Skyline (Clip 1) | Neural Server (Clip 2) | Humanoid Editor (Clip 3) |
-| :---: | :---: | :---: |
-| ![B-Roll City](assets/broll_cyberpunk_city.png) | ![B-Roll Brain](assets/broll_holographic_brain.png) | ![B-Roll Robot](assets/broll_chrome_robot.png) |
+### 4. Viral Clip Detection Screen
+*Volumetric neural mapping of audience retention curves and emotional index splits powered by GPT-4o analytics:*
+![Viral Clip Detection Screen](assets/broll_holographic_brain.png)
+
+### 5. Corporate AI Strategist Character
+*High-end humanoid strategist avatar optimizing hook presets and publishing matrices:*
+![AI Strategist Profile](assets/strategist_avatar.png)
 
 ---
 
