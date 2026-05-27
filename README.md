@@ -1,5 +1,13 @@
 # ⚡ AntiGravity // Multimodal AI Content Engine
 
+![Topic: Multimodal AI](https://img.shields.io/badge/multimodal--ai-00f0ff?style=flat-square&logo=openai&logoColor=black)
+![Topic: Generative AI](https://img.shields.io/badge/generative--ai-bd00ff?style=flat-square&logo=cpu&logoColor=white)
+![Topic: Whisper AI](https://img.shields.io/badge/whisper--ai-ff007c?style=flat-square&logo=mic&logoColor=white)
+![Topic: GPT-4o](https://img.shields.io/badge/gpt4o-05010a?style=flat-square&logo=deepmind&logoColor=white)
+![Topic: Prompt Engineering](https://img.shields.io/badge/prompt--engineering-120c1f?style=flat-square&logo=diagram&logoColor=white)
+![Topic: Content Automation](https://img.shields.io/badge/content--automation-7f6e9c?style=flat-square&logo=automation&logoColor=white)
+![Topic: Video AI](https://img.shields.io/badge/video--ai-e2d9f3?style=flat-square&logo=youtube&logoColor=black)
+
 > Futuristic AI-powered creator studio that automatically transforms long-form video content into viral short-form social media assets.
 
 ---
