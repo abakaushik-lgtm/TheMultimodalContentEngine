@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiGravity // Multimodal AI Content Engine</title>
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sci-Fi Header -->
+    <header class="app-header">
+        <div class="brand-wrapper">
+            <div class="brand-logo-glow"></div>
+            <div>
+                <h1 class="brand-title">AntiGravity</h1>
+                <span class="brand-subtitle">Multimodal Content Core</span>
+            </div>
+        </div>
+
+        <div class="system-telemetry">
+            <div class="telemetry-item">
+                <span class="telemetry-label">Whisper AI Core</span>
+                <span class="telemetry-val" id="telemetry-whisper"><span class="status-indicator"></span>STANDBY</span>
+            </div>
+            <div class="telemetry-item">
+                <span class="telemetry-label">GPT-4o Engine</span>
+                <span class="telemetry-val active" id="telemetry-gpt"><span class="status-indicator online"></span>READY</span>
+            </div>
+            <div class="telemetry-item">
+                <span class="telemetry-label">GPU Acceleration</span>
+                <span class="telemetry-val" id="telemetry-gpu">CUDA v12.4 // 94%</span>
+            </div>
+            <div class="telemetry-item">
+                <span class="telemetry-label">Uplink Status</span>
+                <span class="telemetry-val" style="color: var(--neon-purple); text-shadow: var(--glow-purple);">SECURE CLOUD</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Onboarding Drag & Drop View -->
+    <section class="onboarding-screen" id="onboarding-screen">
+        <div class="cyber-panel upload-card purple-glow">
+            <div class="upload-logo">
+                <div class="brand-logo-glow" style="width: 80px; height: 80px;"></div>
+            </div>
+            <h2 style="font-size: 1.8rem; margin-bottom: 10px; color: #fff;">Initiate Neural Transcoder</h2>
+            <p style="color: var(--cyber-dim); font-size: 0.9rem;">Drop a long-form master asset (MP4, MKV, WAV) to partition, analyze, and generate viral shorts.</p>
+            
+            <div class="upload-dropzone" id="upload-dropzone">
+                <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                <h3 style="font-size: 1rem; color: #fff; margin-bottom: 5px;">Drag & Drop Video Asset</h3>
+                <span style="font-size: 0.75rem; color: var(--cyber-dim);">Supports up to 2GB // 10-Minute Maximum for Engine Calibration</span>
+                <input type="file" id="video-file-input" accept="video/*,audio/*">
+            </div>
+
+            <!-- Upload simulation stats / launcher -->
+            <div id="upload-action-area">
+                <button class="cyber-btn solid-blue" id="launch-core-btn" style="width: 100%; padding: 15px; font-size: 1rem;">
+                    <i class="fa-solid fa-bolt" style="margin-right: 8px;"></i>Ignite AntiGravity Core
+                </button>
+            </div>
+
+            <!-- Pipeline step progression (Hidden initially) -->
+            <div class="pipeline-status-list" id="pipeline-status-list" style="display: none;">
+                <div class="pipeline-step" id="step-upload">
+                    <div class="step-info">
+                        <div class="step-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <span class="step-title">Streaming Asset to Core</span>
+                    </div>
+                    <span class="step-status" id="status-val-upload">PENDING</span>
+                </div>
+                <div class="pipeline-step" id="step-whisper">
+                    <div class="step-info">
+                        <div class="step-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                        <span class="step-title">Whisper AI Transcription Model</span>
+                    </div>
+                    <span class="step-status" id="status-val-whisper">PENDING</span>
+                </div>
+                <div class="pipeline-step" id="step-gpt">
+                    <div class="step-info">
+                        <div class="step-icon"><i class="fa-solid fa-brain"></i></div>
+                        <span class="step-title">GPT-4o Emotional peak mapping</span>
+                    </div>
+                    <span class="step-status" id="status-val-gpt">PENDING</span>
+                </div>
+                <div class="pipeline-step" id="step-render">
+                    <div class="step-info">
+                        <div class="step-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                        <span class="step-title">Cinematic B-Roll Rendering</span>
+                    </div>
+                    <span class="step-status" id="status-val-render">PENDING</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Creator Workspace Dashboard -->
+    <main class="dashboard-grid">
+        
+        <!-- Left Wing: Transcription feed and subtitle edit controls -->
+        <section class="grid-col">
+            <div class="cyber-panel transcript-panel blue-glow corner-decor flex-1">
+                <div class="panel-header-wrap">
+                    <h2 class="panel-headline"><i class="fa-solid fa-align-left" style="margin-right: 8px; color: var(--neon-blue);"></i>Whisper Transcription</h2>
+                    <span class="badge-glow blue">Live Feed</span>
+                </div>
+                
+                <div class="panel-scroll-body flex-column d-flex" style="gap: 15px;">
+                    <div style="font-size: 0.75rem; color: var(--cyber-dim); line-height: 1.4;">
+                        Select a word to jump keyframes. Edit the textbox below to update subtitles dynamically.
+                    </div>
+                    
+                    <div class="transcribe-live-feed" id="transcribe-live-feed">
+                        <span class="transcribe-word" style="color: var(--cyber-dim);">System standby. Launch engine calibration core to begin streaming transcription...</span>
+                    </div>
+
+                    <!-- Dynamic Subtitle Styling presetter -->
+                    <div style="margin-top: auto;">
+                        <h3 class="asset-group-title">Caption Formatting presets</h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px;">
+                            <button class="cyber-btn" id="preset-style-neon" style="font-size: 0.65rem; padding: 6px;" onclick="changeSubtitleStyle('neon')">Neon Blue</button>
+                            <button class="cyber-btn" id="preset-style-kinetic" style="font-size: 0.65rem; padding: 6px;" onclick="changeSubtitleStyle('kinetic')">Kinetic Pink</button>
+                            <button class="cyber-btn" id="preset-style-clean" style="font-size: 0.65rem; padding: 6px;" onclick="changeSubtitleStyle('clean')">Clean White</button>
+                        </div>
+
+                        <!-- Editable subtitle block input -->
+                        <h3 class="asset-group-title">Interactive word corrector</h3>
+                        <input type="text" class="cyber-input" id="subtitle-editor-input" placeholder="Select a word in transcription to correct..." disabled>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Center Wing: Video player sandbox, timeline, and B-roll recommended row -->
+        <section class="grid-col center">
+            
+            <!-- Video Sandbox Player -->
+            <div class="cyber-panel video-sandbox blue-glow">
+                <div class="panel-header-wrap" style="margin-bottom: 10px;">
+                    <h2 class="panel-headline" id="active-clip-title"><i class="fa-solid fa-clapperboard" style="margin-right: 8px; color: var(--neon-blue);"></i>Master Sandbox Player</h2>
+                    <span class="badge-glow blue" id="active-clip-badge">Calibration Needed</span>
+                </div>
+                
+                <div class="player-frame" id="player-frame">
+                    <img src="assets/branding_hero.png" alt="AntiGravity Studio View" class="studio-banner-img" id="player-mock-asset">
+                    
+                    <!-- Floating reactive subtitles overlay -->
+                    <div class="player-subtitle-overlay" id="player-subtitle-overlay" style="display: none;">
+                        <div class="subtitle-word-wrapper neon-style" id="subtitle-text-box">INITIALIZING ENGINE...</div>
+                    </div>
+
+                    <!-- Custom Player controls -->
+                    <div class="player-controls">
+                        <button class="control-btn" id="player-play-btn" disabled><i class="fa-solid fa-play"></i></button>
+                        <div class="progress-track-wrapper" id="player-progress-track">
+                            <div class="progress-bar" id="player-progress-bar"></div>
+                        </div>
+                        <div style="font-size: 0.7rem; font-family: monospace;" id="player-time-display">00:00 / 00:00</div>
+                    </div>
+                </div>
+
+                <!-- Canvas Waveform reactive track -->
+                <div class="waveform-container">
+                    <canvas class="waveform-canvas" id="waveform-canvas"></canvas>
+                </div>
+            </div>
+
+            <!-- Segmented Timeline Track -->
+            <div class="cyber-panel timeline-panel purple-glow" style="padding: 15px;">
+                <div class="panel-header-wrap" style="margin-bottom: 8px;">
+                    <h2 class="panel-headline" style="font-size: 0.8rem;"><i class="fa-solid fa-chart-simple" style="margin-right: 8px; color: var(--neon-purple);"></i>Holographic Segmented Timeline (10 Min Master)</h2>
+                    <span class="badge-glow purple" style="font-size: 0.55rem;">GPT-4o Slices</span>
+                </div>
+                
+                <div class="timeline-track" id="timeline-track">
+                    <!-- Placeholder timeline segments to be dynamically rendered -->
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--cyber-dim); font-family: monospace;">
+                        SYSTEM OFF-LINE. PARTITION TIMELINE BY IGNITING CORE
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lower Cinematic B-Roll Row suggestions -->
+            <div class="cyber-panel purple-glow corner-decor" style="flex: 1; max-height: 250px;">
+                <div class="panel-header-wrap" style="margin-bottom: 10px;">
+                    <h2 class="panel-headline" style="font-size: 0.8rem;"><i class="fa-solid fa-compass" style="margin-right: 8px; color: var(--neon-purple);"></i>AI B-Roll recommendation Engine</h2>
+                    <span class="badge-glow purple" style="font-size: 0.55rem;">Generative Cues</span>
+                </div>
+                
+                <div class="panel-scroll-body">
+                    <div class="broll-shelf" id="broll-shelf">
+                        <!-- Simulated items filled dynamically -->
+                        <div style="grid-column: span 3; text-align: center; color: var(--cyber-dim); font-size: 0.8rem; padding: 25px 0;">
+                            Generate viral clips to fetch suggested matching Cinematic B-roll layers.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Right Wing: Social Optimization Hooks, publish actions, and performance predictive heatmaps -->
+        <section class="grid-col">
+            <div class="cyber-panel purple-glow corner-decor flex-1 d-flex flex-column">
+                <div class="panel-header-wrap">
+                    <h2 class="panel-headline"><i class="fa-solid fa-wand-magic-sparkles" style="margin-right: 8px; color: var(--neon-purple);"></i>Viral Asset builder</h2>
+                    <span class="badge-glow purple">Optimizer</span>
+                </div>
+
+                <div class="panel-scroll-body d-flex flex-column gap-15">
+                    
+                    <!-- Top Short Hook options -->
+                    <div>
+                        <h3 class="asset-group-title">AI Hook Variations</h3>
+                        <div id="hook-variations-container">
+                            <div style="text-align: center; color: var(--cyber-dim); font-size: 0.75rem; padding: 15px 0;">
+                                Awaiting viral extraction sequence...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optimized Caption template -->
+                    <div>
+                        <h3 class="asset-group-title">Generated Reels Caption</h3>
+                        <div class="caption-copy-box" id="caption-copy-box">
+                            <button class="copy-btn-floating" onclick="copyCaptionText()"><i class="fa-solid fa-copy"></i> Copy</button>
+                            <div id="caption-text-content" style="color: var(--cyber-dim);">
+                                Hook captions and tags will compile dynamically matching the active video slice.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Scheduler publishing trigger options -->
+                    <div>
+                        <h3 class="asset-group-title">Multi-Platform Publishing</h3>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                            <button class="cyber-btn solid-blue" id="action-btn-preview" disabled onclick="openReelPreviewMock()"><i class="fa-solid fa-mobile-screen-button" style="margin-right: 6px;"></i>Reel Preview</button>
+                            <button class="cyber-btn" id="action-btn-publish" disabled onclick="openPublishOverlay()"><i class="fa-solid fa-share-nodes" style="margin-right: 6px;"></i>Uplink Feed</button>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Section: predictive retention heatmaps and gauges -->
+                    <div style="margin-top: auto;">
+                        <h3 class="asset-group-title">Holographic performance scoring</h3>
+                        
+                        <div class="heatmap-container">
+                            <canvas class="heatmap-canvas" id="heatmap-canvas"></canvas>
+                        </div>
+
+                        <div class="analytics-predicted-grid">
+                            <div class="predictive-gauge-card">
+                                <div class="predicted-score-radial">
+                                    <svg width="54" height="54">
+                                        <circle cx="27" cy="27" r="23" class="radial-circle-bg"/>
+                                        <circle cx="27" cy="27" r="23" class="radial-circle-active" id="radial-retention" stroke-dasharray="144.5" stroke-dashoffset="144.5"/>
+                                    </svg>
+                                    <span class="predicted-val" id="predicted-retention-val">--</span>
+                                </div>
+                                <span class="gauge-title">Retention</span>
+                            </div>
+                            <div class="predictive-gauge-card">
+                                <div class="predicted-score-radial">
+                                    <svg width="54" height="54">
+                                        <circle cx="27" cy="27" r="23" class="radial-circle-bg"/>
+                                        <circle cx="27" cy="27" r="23" class="radial-circle-active" id="radial-share" stroke-dasharray="144.5" stroke-dashoffset="144.5" style="stroke: var(--neon-purple);"/>
+                                    </svg>
+                                    <span class="predicted-val" id="predicted-share-val">--</span>
+                                </div>
+                                <span class="gauge-title">Share index</span>
+                            </div>
+                            <div class="predictive-gauge-card">
+                                <div class="predicted-score-radial">
+                                    <svg width="54" height="54">
+                                        <circle cx="27" cy="27" r="23" class="radial-circle-bg"/>
+                                        <circle cx="27" cy="27" r="23" class="radial-circle-active" id="radial-click" stroke-dasharray="144.5" stroke-dashoffset="144.5" style="stroke: var(--neon-pink);"/>
+                                    </svg>
+                                    <span class="predicted-val" id="predicted-click-val">--</span>
+                                </div>
+                                <span class="gauge-title">Hook CTR</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 9:16 Vertical Reel Player Phone viewport Mockup drawer overlay -->
+    <section class="reel-preview-backdrop" id="reel-preview-backdrop">
+        <div class="reel-close-btn" onclick="closeReelPreviewMock()"><i class="fa-solid fa-xmark"></i></div>
+        
+        <div class="reel-phone-mockup">
+            <div class="phone-notch"></div>
+            
+            <div class="reel-viewport" id="reel-viewport">
+                <!-- Renders broll suggestions or specific clip visual preview inside vertical aspect frame -->
+                <img src="assets/broll_cyberpunk_city.png" class="reel-video-simulate" id="reel-preview-video-asset">
+                
+                <!-- Reel kinetic active typography subtitle floating frame -->
+                <div class="reel-kinetic-subtitle-wrap">
+                    <span class="reel-kinetic-subtitle" id="reel-kinetic-text-box">UPLINK STREAMING...</span>
+                </div>
+
+                <!-- Instagram Reels standard UI action icons on right overlay -->
+                <div class="reel-social-sidebar">
+                    <div class="reel-sidebar-icon-wrap">
+                        <i class="fa-solid fa-heart"></i>
+                        <span id="reel-likes-val">98.4K</span>
+                    </div>
+                    <div class="reel-sidebar-icon-wrap">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>1.2K</span>
+                    </div>
+                    <div class="reel-sidebar-icon-wrap">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>24.8K</span>
+                    </div>
+                    <div class="reel-sidebar-icon-wrap">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="reel-music-disc">
+                        <i class="fa-solid fa-music" style="font-size: 0.65rem; color: #fff;"></i>
+                    </div>
+                </div>
+
+                <!-- Instagram footer profile details -->
+                <div class="reel-user-caption-area">
+                    <div class="reel-user-tag">
+                        <img src="assets/strategist_avatar.png" style="width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--neon-blue);" alt="AI Strategist">
+                        antigravity.ai
+                    </div>
+                    <div class="reel-caption-text" id="reel-caption-ticker">
+                        Transforming long-form footage into viral gold automatically. Powered by Whisper and GPT-4o. #cyberpunk #contentengine #antigravity
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Uplink Publishing Simulated Dialogue -->
+    <section class="publishing-overlay" id="publishing-overlay">
+        <div class="cyber-panel publish-flow-card blue-glow">
+            <h2 style="font-size: 1.4rem; color: #fff; margin-bottom: 10px;" id="publish-flow-title">Secure Quantum Data Uplink</h2>
+            <p style="color: var(--cyber-dim); font-size: 0.85rem;" id="publish-flow-description">Packaging assets and connecting APIs to broadcast reels across distributed social matrices.</p>
+            
+            <div class="data-uplink-loader" id="data-uplink-loader"></div>
+            <div class="data-stream-bytes" id="data-stream-bytes">000000000000000000</div>
+            
+            <div id="publish-success-controls" style="display: none; margin-top: 25px;">
+                <h3 style="color: var(--neon-blue); text-shadow: var(--glow-blue); font-size: 1.2rem; margin-bottom: 10px;"><i class="fa-solid fa-circle-check"></i> UPLINK SUCCESSFUL</h3>
+                <p style="color: var(--cyber-text); font-size: 0.8rem; margin-bottom: 20px;">Clip scheduled, metadata published, and kinetic subtitles injected seamlessly.</p>
+                <button class="cyber-btn" onclick="closePublishOverlay()" style="width: 100%;">Deactivate Uplink Connection</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulation Logic Controller Script -->
+    <script src="app.js"></script>
+</body>
+</html>
