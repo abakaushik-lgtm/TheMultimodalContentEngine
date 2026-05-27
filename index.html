@@ -136,6 +136,50 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- AI Pipeline Blueprint flowchart visual -->
+            <div class="cyber-panel blue-glow" style="padding: 12px; margin-top: 0px; max-height: 155px; display: flex; flex-direction: column;">
+                <div class="panel-header-wrap" style="margin-bottom: 8px; padding-bottom: 4px;">
+                    <h2 class="panel-headline" style="font-size: 0.75rem;"><i class="fa-solid fa-network-wired" style="margin-right: 8px; color: var(--neon-blue);"></i>Quantum Pipeline Blueprint</h2>
+                    <span class="badge-glow blue" style="font-size: 0.5rem;">Active Flow</span>
+                </div>
+                
+                <svg class="blueprint-svg" viewBox="0 0 300 80">
+                    <!-- Connector lines -->
+                    <path d="M 45 40 L 95 40" class="blueprint-line" />
+                    <path d="M 125 40 L 175 40" class="blueprint-line purple" />
+                    <path d="M 205 40 L 255 40" class="blueprint-line pink" />
+                    
+                    <!-- Nodes -->
+                    <!-- Node 1: Whisper -->
+                    <g class="blueprint-node-group">
+                        <circle cx="30" cy="40" r="14" class="blueprint-node" />
+                        <text x="30" y="44" font-size="12" text-anchor="middle">🎤</text>
+                        <text x="30" y="68" class="blueprint-label">Whisper</text>
+                    </g>
+                    
+                    <!-- Node 2: GPT-4o -->
+                    <g class="blueprint-node-group">
+                        <circle cx="110" cy="40" r="14" class="blueprint-node purple" />
+                        <text x="110" y="44" font-size="12" text-anchor="middle">🧠</text>
+                        <text x="110" y="68" class="blueprint-label">GPT-4o</text>
+                    </g>
+                    
+                    <!-- Node 3: B-Roll Shelf -->
+                    <g class="blueprint-node-group">
+                        <circle cx="190" cy="40" r="14" class="blueprint-node purple" />
+                        <text x="190" y="44" font-size="12" text-anchor="middle">🎬</text>
+                        <text x="190" y="68" class="blueprint-label">B-Roll</text>
+                    </g>
+                    
+                    <!-- Node 4: Publish -->
+                    <g class="blueprint-node-group">
+                        <circle cx="270" cy="40" r="14" class="blueprint-node pink" />
+                        <text x="270" y="44" font-size="12" text-anchor="middle">🚀</text>
+                        <text x="270" y="68" class="blueprint-label">Publish</text>
+                    </g>
+                </svg>
+            </div>
         </section>
 
         <!-- Center Wing: Video player sandbox, timeline, and B-roll recommended row -->

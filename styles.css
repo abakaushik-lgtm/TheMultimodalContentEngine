@@ -1360,3 +1360,67 @@ h1, h2, h3, h4, h5, h6, .cyber-tech-font {
         padding: 15px;
     }
 }
+
+/* AI Pipeline blueprint flow details */
+.blueprint-svg {
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+
+.blueprint-line {
+    stroke: var(--neon-blue);
+    stroke-width: 1.5;
+    fill: none;
+    stroke-dasharray: 6, 4;
+    animation: flowData 1s linear infinite;
+}
+
+.blueprint-line.purple {
+    stroke: var(--neon-purple);
+}
+
+.blueprint-line.pink {
+    stroke: var(--neon-pink);
+    animation-duration: 0.5s;
+}
+
+@keyframes flowData {
+    to {
+        stroke-dashoffset: -20;
+    }
+}
+
+.blueprint-node {
+    fill: var(--cyber-black);
+    stroke: var(--neon-blue);
+    stroke-width: 1.5;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.blueprint-node:hover {
+    stroke: var(--neon-pink);
+    filter: drop-shadow(0 0 8px var(--neon-pink));
+}
+
+.blueprint-node.purple {
+    stroke: var(--neon-purple);
+}
+
+.blueprint-node.pink {
+    stroke: var(--neon-pink);
+}
+
+.blueprint-label {
+    font-family: var(--cyber-font);
+    font-size: 0.5rem;
+    fill: var(--cyber-dim);
+    text-anchor: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.blueprint-node-group:hover .blueprint-label {
+    fill: #fff;
+}
