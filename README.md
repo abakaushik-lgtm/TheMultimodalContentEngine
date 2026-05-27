@@ -59,14 +59,23 @@ graph TD
 
 ---
 
-## 🛠️ Tools & Technologies Used
+## 🛠️ Tech Stack Section
 
-- **Frontend Core**: Vanilla HTML5 (semantic layout architecture) & Modern ES6 Javascript (modular simulation core).
-- **Styling**: Custom CSS Custom Properties (CSS variables) for real-time neon coloring, glassmorphism templates (`backdrop-filter`), flex/grid scaling, and scrolling scanline animations.
-- **Audio Waveform Engine**: HTML5 Canvas rendering multi-layered frequency sine waves dynamically responding to player playback.
-- **Analytics Visualization**: HTML5 Canvas graphing audience retention spikes and highlight partitions.
-- **Icons**: FontAwesome v6 (vectorized tech interface icons).
-- **Branding & Assets**: Advanced neural generative imaging (cinematic 8K resolution brand assets).
+The **AntiGravity AI** creator studio is built using a highly focused, high-performance technology stack split across three distinct operational layers:
+
+### 1. AI & Cognitive Modeling Layers
+* **Speech-to-Text Model**: **Whisper AI** — Processes high-speed audio signals, streaming real-time word-level transcription matrices with precise timestamp offset bounds and word-level confidence indices.
+* **Emotion & Hook Extraction**: **GPT-4o (Cognitive Engine)** — Evaluates semantic text data alongside timeline telemetry to identify the top 5 high-retention "emotional peak" moments, auto-compiles multi-platform hook options, and scores potential CTR impact.
+
+### 2. Interactive Media Synthesis
+* **Web Audio Canvas Engine**: **Native HTML5 Canvas API** — Renders reactive, multi-layered visual soundwaves and audio frequency sine waves that animate and morph dynamically in sync with video playback speeds.
+* **Predictive Performance heatmaps**: **Native HTML5 Canvas API** — Graphs audience retention drop-offs, highlighting the exact viral moment slice region.
+* **Generative Media Asset Library**: **Generative Image Engine** — Visualizes 8K photorealistic dashboards, strategist characters, and cinematic vertical B-roll recommendations inside the studio database.
+
+### 3. Holographic Frontend Shell
+* **Styling & Layout**: **Vanilla CSS (CSS Custom Properties)** — Employs a zero-dependency cyberpunk styling framework leveraging glassmorphic blurring (`backdrop-filter`), cybernetic button structures (`clip-path`), glowing border keyframes, and neon scrolling scanlines.
+* **Interface Blueprint**: **Inline SVG Core & FontAwesome v6** — Powers animated, glowing network schemas displaying high-speed data flow packet paths between processing units in real-time.
+* **Behavior Logic Controller**: **Modular Vanilla ES6+ Javascript** — Orchestrates the simulation timelines, handles transcription streams, synchronizes subtitles, binds interactive text correctors, and routes publishing scheduler feeds.
 
 ---
 
