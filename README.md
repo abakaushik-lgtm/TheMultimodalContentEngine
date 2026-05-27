@@ -128,9 +128,19 @@ Here is a high-fidelity visual showcase of the **AntiGravity** workspace platfor
 
 ---
 
-## 🚀 Future Scope
+## 🚀 Future Enhancements
 
-- **Real Audio API integration**: Integrate actual Whisper APIs and serverless node audio pipelines to support active drag-and-drop transcribe flows.
-- **Serverless Video Processing**: Incorporate `ffmpeg.wasm` directly inside the browser sandbox to slice, overlay subtitles, and stitch recommended B-roll clips client-side.
-- **Platform Webhooks**: Establish OAuth connections to Instagram Business, TikTok Creator, and YouTube APIs to automate scheduling and publishing with a single click.
-- **Advanced Dynamic Subtitles**: Expand the subtitle library with more dynamic layout variations, including standard text paths, sound effect overlays, and animated speech tags.
+We are actively developing and expanding the AntiGravity engine capabilities. Future roadmap integrations include:
+
+* 🚀 **Auto Video Clipping** — Server-side or client-side video cropping using `ffmpeg.wasm` to automatically frame and slice high-engagement segments.
+* 🗣 **AI Voice Cloning** — Synthesizing natural corporate and branding voices from short 10-second reference audio recordings.
+* 🌐 **Multi-Language Subtitle Generation** — Instant transcription translation and kinetic subtitles generation across 24+ languages.
+* 📱 **TikTok/Reels Auto Publishing** — Direct social platform API webhooks to publish and schedule short-form assets with a single click.
+* 📊 **Engagement Prediction Analytics** — Deep predictive machine learning models to forecast real audience view ranges and comments ratios prior to publishing.
+
+### Core Architecture Roadmap
+
+- **Real Audio API integration**: Connect live Whisper APIs and serverless node audio transcribing models to process direct file drops.
+- **Serverless Video Processing**: Incorporate browser sandboxed WebAssembly compilers (`ffmpeg.wasm`) to slice timelines client-side.
+- **Platform Webhooks**: Establish secure OAuth connections to Instagram Business, TikTok Creator, and YouTube social APIs to fully automate publication feeds.
+- **Advanced Dynamic Subtitles**: Expand kinetic typography layout libraries with custom speech tracking presets, volumetric overlays, and sound-reactive fonts.
